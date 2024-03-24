@@ -1,8 +1,13 @@
 import React from "react";
+import Transactions from "./components/transaction";
 import "./App.css";
 
 const App = () => {
-  return <div></div>;
+  return (
+    <>
+      <Transactions />
+    </>
+  );
 };
 
 export default App;

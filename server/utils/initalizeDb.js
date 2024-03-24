@@ -1,16 +1,16 @@
 const axios = require("axios");
 const mongoose = require("mongoose");
-const Item = require("./../models/item");
+const Item = require("../models/item");
 
 let url = `https://s3.amazonaws.com/roxiler.com/product_transaction.json`;
 
-main()
+connectDb()
   .then(() => {
     console.log(`Connection successful`);
   })
   .catch((err) => console.log(err));
 
-async function main() {
+async function connectDb() {
   await mongoose.connect("mongodb://127.0.0.1:27017/sale");
   await initDb();
 }
