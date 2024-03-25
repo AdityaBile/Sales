@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const Item = require("../models/item");
+
+const transactControllers = require("./../controller/transactionController");
 
 // GET /api/transactions
-router.get("/", async (req, res) => {});
+router.route("/").get(transactControllers.home);
 
 module.exports = router;

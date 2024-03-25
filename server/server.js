@@ -3,11 +3,14 @@ const mongoose = require("mongoose");
 const path = require("path");
 const cors = require("cors");
 
-// Routes
+// DataBase Routes
 const connectDb = require("./utils/connectionDb");
+const Item = require("./models/item");
+
+//Routes
 const transactionRoutes = require("./routes/transactionRoutes");
-const monthRoutes = require("./routes/month");
-const chartRoutes = require("./routes/chart");
+const monthRoutes = require("./routes/monthRoutes");
+const chartRoutes = require("./routes/chartRoutes");
 
 const app = express();
 const port = 5000;
