@@ -1,8 +1,7 @@
 import React from "react";
-import "./../css/transaction.css";
+import "../css/Transaction.css";
 import DropMonth from "../components/transaction/DropMonth";
 import TableContent from "../components/transaction/TableContent";
-import PageNavigate from "../components/transaction/PageNavigate";
 import Searchbar from "../components/transaction/Searchbar";
 import TableHeading from "../components/transaction/TableHeading";
 
@@ -16,7 +15,6 @@ const Transaction = () => {
           <DropMonth />
         </div>
         <TableContent />
-        <PageNavigate />
       </form>
     </div>
   );

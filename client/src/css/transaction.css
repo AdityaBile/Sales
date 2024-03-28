@@ -1,47 +1,24 @@
-.transaction-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
 .transaction-title {
   text-align: center;
 }
 
+.transaction-container {
+  padding: 20px; /* Add padding around the container */
+}
+
 .search-container {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
+  justify-content: space-around; /* Space items evenly */
+  margin-bottom: 20px;
 }
 
 .search-input {
-  flex: 1;
-  margin-right: 10px;
+  padding: 8px;
+  font-size: 16px;
+  margin-right: 10px; /* Add margin between search input and dropdown */
 }
 
 .month-select {
-  flex: 1;
-}
-
-.transaction-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 10px;
-}
-
-.transaction-table th,
-.transaction-table td {
   padding: 8px;
-  border: 1px solid #ddd;
-  text-align: left;
-}
-
-.pagination-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.pagination-container button {
-  margin-left: 10px;
+  font-size: 16px;
 }

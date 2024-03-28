@@ -1,4 +1,5 @@
 import React from "react";
+import "../../css/transaction/Searchbar.css";
 
 const Searchbar = () => {
   return (
