@@ -4,8 +4,6 @@ import axios from "axios";
 
 const TableContent = () => {
   const [tableData, setTableData] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const recordsPerPage = 10;
 
   useEffect(() => {
     axios
@@ -16,6 +14,9 @@ const TableContent = () => {
 
   // Pagination
   // currentPage -> tableData
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const recordsPerPage = 10;
   const lastIndex = currentPage * recordsPerPage;
   const firstIndex = lastIndex - recordsPerPage;
   const records = tableData.slice(firstIndex, lastIndex);
@@ -36,6 +37,33 @@ const TableContent = () => {
     if (currentPage < nPage) {
       setCurrentPage(currentPage + 1);
     }
+  };
+
+  // Converting Date to Standard format
+
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  const formatDate = (stringDate) => {
+    let dateObj = new Date(stringDate);
+    const month = months[dateObj.getMonth()];
+    return month;
+    // const date = dateObj.getDate();
+    // const year = dateObj.getFullYear();
+    // const fullDate = `${date} ${month} ${year}`;
+    // return fullDate;
   };
 
   return (
@@ -65,7 +93,7 @@ const TableContent = () => {
                 <img src={data.image} alt={data.title} />
               </td>
               <td>{data.sold ? "Yes" : "No"}</td>
-              <td>{data.dateOfSale}</td>
+              <td>{formatDate(data.dateOfSale)}</td>
             </tr>
           ))}
         </tbody>
